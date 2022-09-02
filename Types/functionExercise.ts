@@ -37,8 +37,8 @@ console.log(twoFer('Elton'));
 const isLeapYear = (year: number): boolean => {
     return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0
 };
-console.log(2012);
-console.log(2013);
+console.log(isLeapYear(2012));
+console.log(isLeapYear(2013));
 
 // To determine whether a year is a leapyear, use this "formula":
 // A YEAR IS A LEAPYEAR IF

@@ -9,12 +9,12 @@ square1(true);
 
 // Specify the parameter
 function square(num: number) {
-    num.toUppercase();
+    // num.toUppercase();
     return num * num;
 }
 square(3);
-square('HELLO');
-square(true);
+// square('HELLO');
+// square(true);
 
 
 
