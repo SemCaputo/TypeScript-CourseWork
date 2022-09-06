@@ -53,3 +53,48 @@ function calculateTax(price: number | string, tax: number) {
 
 console.log(calculateTax(45, 0.7));
 console.log(calculateTax('$45', 0.7));
+
+
+// Union Type and Arrays:
+
+// Union type of number or string as and ARRAY.
+// This ARRAY can contain both numbers and strings.
+// USE THIS INSTEAD OF ANY.
+const stuff: (number | string)[] = [];
+
+// not the same as:
+const things: number[] | string[] = [];
+// this ARRAY can contain either numbers or a string.
+
+
+const coords: (Point | Loc)[] = [];
+coords.push({ lat: 321.312, long: 321.123 });
+// coords.push({x:'asd', y:'dasd'});
+
+
+// LITERAL TYPES:
+// only 1 value accepted.
+let zero: 0 = 0
+// let zero = 2;
+
+
+// Combine Literal Type w/ Union Types:
+const giveAnswer = (answer: 'yes' | 'no' | 'maybe') => {
+    return `the answer is ${answer}`
+};
+// can provide 1 of the literals in the union:
+giveAnswer('no');
+
+// not an assignable parameter:
+// giveAnswer('HELLO');
+type DayOfWeek =
+    | 'Monday'
+    | 'Tuesday'
+    | 'Wednesday'
+    | 'Thursday'
+    | 'Friday'
+    | 'Saturday'
+    | 'Sunday';
+let today: DayOfWeek = 'Monday'
+// let today: DayOfWeek = 'Mon'
+
