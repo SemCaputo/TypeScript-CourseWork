@@ -42,3 +42,37 @@ function isDelivered(status: OrderStatus) {
 };
 
 isDelivered(OrderStatus.RETURNED)
+
+
+// Numbers have been assigned automatically, but can be changed by adding = and a new value:
+enum ArrowKeys {
+    UP = 'up',
+    DOWN = 'down',
+    LEFT = 'left',
+    RIGHT = 'right'
+};
+
+ArrowKeys.LEFT
+
+
+
+
+
+
+const enum OrderStatus2 {
+    PENDING,
+    SHIPPED,
+    DELIVERED,
+    RETURNED
+};
+// compile code in JS:
+
+// "use strict";
+// var OrderStatus2;
+// (function (OrderStatus2) {
+//     OrderStatus2[OrderStatus2["PENDING"] = 0] = "PENDING";
+//     OrderStatus2[OrderStatus2["SHIPPED"] = 1] = "SHIPPED";
+//     OrderStatus2[OrderStatus2["DELIVERED"] = 2] = "DELIVERED";
+//     OrderStatus2[OrderStatus2["RETURNED"] = 3] = "RETURNED";
+// })(OrderStatus2 || (OrderStatus2 = {}));
+// ;
