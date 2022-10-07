@@ -58,3 +58,4 @@ const shoes: Product = {
     },
 };
 console.log(shoes.applyDiscount(0.4));
+
